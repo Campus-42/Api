@@ -1,0 +1,30 @@
+{
+  "200": {
+    "msg": "The request was handled successfully",
+    "status": 200
+  },
+  "201": {
+    "msg": "The post request was created succesfully",
+    "status": 201
+  },
+  "400": {
+    "msg": "Bad input parameters was detected. The body passed in fetch must include the necessary children/keys to be allowed. These can be found at https://github.com/JesLied/Campus42/blob/master/Api/README.md",
+    "status": 400
+  },
+  "401": {
+    "msg": "Invalid api key was sent, contact hello@campus42.co.uk to ask for a valid key",
+    "status": 401
+  },
+  "404": {
+    "msg": "This route does not exists, try another route",
+    "status": 404
+  },
+  "500": {
+    "msg": "Unknown server error, the process could not successfully be completed",
+    "status": 500
+  },
+  "503": {
+    "msg": "The requested resource is currently unavailable",
+    "status": 503
+  }
+}
