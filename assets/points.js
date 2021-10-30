@@ -1,7 +1,11 @@
 const date = require("./date");
 const {
   POINT_EVENTS,
+<<<<<<< HEAD
 } = require("../../Server/assets/points/POINT_EVENTS");
+=======
+} = require("../../Server Side Functions/assets/points/POINT_EVENTS");
+>>>>>>> de6d09b9d12999121f1580a3c731fe4531e8d152
 const firebaseFuncs = require("./firebase/functions");
 const { CouchDB } = require("./couchdb");
 const logger = require("./logger");

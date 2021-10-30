@@ -12,7 +12,11 @@ const path = process.argv
 const ApiKeys = require(path);
 
 /**
+<<<<<<< HEAD
  * Validate the api key provided
+=======
+ * Validate the api api key provided
+>>>>>>> de6d09b9d12999121f1580a3c731fe4531e8d152
  */
 exports.checkApiKey = (key) => ApiKeys[key] !== undefined && ApiKeys[key].valid;
 

@@ -1,6 +1,10 @@
 const logger = require("../logger");
 const { db, auth, admin } = require("./index");
+<<<<<<< HEAD
 const $ = require("../../../Server/assets/points/formulas");
+=======
+const $ = require("../../../Server Side Functions/assets/points/formulas");
+>>>>>>> de6d09b9d12999121f1580a3c731fe4531e8d152
 const date = require("../date");
 
 const firebaseFuncs = {
@@ -40,8 +44,12 @@ const firebaseFuncs = {
   },
   updateUserPoints: async function (uid, newPoints) {
     const userDoc = await firebaseFuncs.getDoc(`/users/${uid}`, true);
+<<<<<<< HEAD
     if (userDoc.error || !userDoc.doc.points)
       return { error: userDoc.error || "No user points found" };
+=======
+    if (userDoc.error || !userDoc.doc.points) return { error: userDoc.error || "No user points found" };
+>>>>>>> de6d09b9d12999121f1580a3c731fe4531e8d152
 
     const points = (userDoc.doc.points || 0) + newPoints;
     const newLevel = $.getLevel(points);
@@ -51,11 +59,15 @@ const firebaseFuncs = {
     userDoc.doc.level = newLevel;
     userDoc.doc.period_points = period_points;
 
+<<<<<<< HEAD
     const update = await firebaseFuncs.updateDoc(`/users/${uid}`, {
       points,
       period_points,
       level: newLevel,
     });
+=======
+    const update = await firebaseFuncs.updateDoc(`/users/${uid}`, { points, period_points, level: newLevel });
+>>>>>>> de6d09b9d12999121f1580a3c731fe4531e8d152
     if (update.error) return { error: update.error };
     else return { user: userDoc.doc };
   },
